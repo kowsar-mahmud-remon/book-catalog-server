@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\successes\\.7571a015cd4e4002e51d2bad3a67d9547c231ad4-audit.json",
+    "files": [
+        {
+            "date": 1693567639675,
+            "name": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\successes\\phu-2023-01-09-17-success.log",
+            "hash": "11a2fb18d35524c043ad1221c8354df14e6e4b14c4a950aea1fc82da04bb7600"
+        },
+        {
+            "date": 1693570430740,
+            "name": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\successes\\phu-2023-01-09-18-success.log",
+            "hash": "ba995ba0c96e5956810dc6cb4344f98a1948cac321817c0a666be8e7c27c627f"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -19,6 +19,10 @@ model User {
   contactNo String
   address String
   profileImg String
+
+  orders Order[]
+
+  @@map("users")
 }
 enum UserRole {
   admin
@@ -30,6 +34,8 @@ model Category {
   title String
 
   books Book[]
+
+  @@map("categries")
 }
 
 model Book {
@@ -40,7 +46,23 @@ model Book {
   genre String
   publicationDate String
 
-  CategoryId String
-  category Category @relation(fields: [CategoryId],references: [id])
+  categoryId String
+  category Category @relation(fields: [categoryId],references: [id])
+
+  @@map("books")
+
+}
+
+model Order {
+  id String @id @default(uuid())
+  
+  userId String
+  category User @relation(fields: [userId],references: [id])
+
+  orderedBooks Json[]
+  status String
+  createdAt DateTime @default(now())
+
+  @@map("orders")
 
 }

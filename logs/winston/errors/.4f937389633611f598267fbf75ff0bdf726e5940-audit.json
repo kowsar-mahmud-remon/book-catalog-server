@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\errors\\.4f937389633611f598267fbf75ff0bdf726e5940-audit.json",
+    "files": [
+        {
+            "date": 1693567639682,
+            "name": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\errors\\phu-2023-01-09-17-error.log",
+            "hash": "b76e48bda3ac3859fb8f045a34a9a98d470c3d852354ff366f8161b783e52ec9"
+        },
+        {
+            "date": 1693570430752,
+            "name": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\errors\\phu-2023-01-09-18-error.log",
+            "hash": "ebb5ceaaacc0d66cb0d4ced5d3bcd8563c3b9c03e45f2589fc8d38654272a4d3"
+        }
+    ],
+    "hashType": "sha256"
+}
