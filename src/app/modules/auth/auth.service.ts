@@ -45,7 +45,7 @@ const loginUser = async (data: any) => {
   return accessToken;
 };
 
-export const UserService = {
+export const AuthService = {
   createUser,
   loginUser,
 };

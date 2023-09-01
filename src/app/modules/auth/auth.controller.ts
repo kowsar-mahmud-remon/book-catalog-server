@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { UserService } from './auth.service';
+import { AuthService } from './auth.service';
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
-  const result = await UserService.createUser(req.body);
+  const result = await AuthService.createUser(req.body);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
@@ -15,7 +15,7 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
 });
 
 const loginUser = catchAsync(async (req: Request, res: Response) => {
-  const result = await UserService.loginUser(req.body);
+  const result = await AuthService.loginUser(req.body);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -25,7 +25,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const UserController = {
+export const AuthController = {
   createUser,
   loginUser,
 };

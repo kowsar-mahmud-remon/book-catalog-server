@@ -1,5 +1,5 @@
 import express from 'express';
-import { UserController } from './auth.controller';
+import { AuthController } from './auth.controller';
 
 const router = express.Router();
 
@@ -7,14 +7,14 @@ router.post(
   '/signup',
   // auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   // validateRequest(StudentValidation.create),
-  UserController.createUser
+  AuthController.createUser
 );
 
 router.post(
   '/signin',
   // auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   // validateRequest(StudentValidation.create),
-  UserController.loginUser
+  AuthController.loginUser
 );
 
-export const UserRoutes = router;
+export const AuthRoutes = router;
