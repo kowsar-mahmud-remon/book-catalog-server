@@ -40,8 +40,23 @@ const updateSingleUser = async (id: string, data: any) => {
   return result;
 };
 
+const deleteUser = async (id: string) => {
+  const result = await prisma.user.delete({
+    where: {
+      id: id,
+    },
+  });
+
+  if (!result) {
+    throw new ApiError(400, 'Failed to delete user');
+  }
+
+  return result;
+};
+
 export const UserService = {
   getAllUsers,
   getSingleUser,
   updateSingleUser,
+  deleteUser,
 };
