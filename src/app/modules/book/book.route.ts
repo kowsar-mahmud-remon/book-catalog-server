@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/:id', BookController.getSingleBook);
 
-// router.get('/:categoryId/category', BookController.getSingleBook);
+router.get('/:categoryId/category', BookController.getBookByCategoryId);
 
 router.get('/', BookController.getAllBooks);
 

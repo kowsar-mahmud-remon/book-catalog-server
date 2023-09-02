@@ -24,6 +24,11 @@
             "date": 1693631620502,
             "name": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\errors\\phu-2023-02-09-11-error.log",
             "hash": "2df2833c7f8f995e8e8cd8e0abf9d64554739bb691fef0d69932d214492a7ed3"
+        },
+        {
+            "date": 1693634459576,
+            "name": "I:\\Web Development\\projects 03\\Prisma\\book-catallog\\logs\\winston\\errors\\phu-2023-02-09-12-error.log",
+            "hash": "485f6de2b796e91179c5cf1e406cabfe0ee5a258a66fc3a3518f29c90e0b07f7"
         }
     ],
     "hashType": "sha256"

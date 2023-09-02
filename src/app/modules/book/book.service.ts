@@ -41,6 +41,20 @@ const getSingleBook = async (id: string) => {
   return result;
 };
 
+const getBookByCategoryId = async (categoryId: string) => {
+  const result = await prisma.book.findMany({
+    where: {
+      categoryId,
+    },
+  });
+
+  if (!result) {
+    throw new ApiError(400, 'Failed to get books');
+  }
+
+  return result;
+};
+
 const updateSingleBook = async (id: string, data: any) => {
   const result = await prisma.book.update({
     where: {
@@ -73,6 +87,7 @@ const deleteBook = async (id: string) => {
 export const BookService = {
   createBook,
   getAllBooks,
+  getBookByCategoryId,
   getSingleBook,
   updateSingleBook,
   deleteBook,
