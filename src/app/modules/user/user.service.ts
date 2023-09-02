@@ -19,7 +19,22 @@ const getSingleUser = async (id: string) => {
   });
 
   if (!result) {
-    throw new ApiError(400, 'Failed to get users');
+    throw new ApiError(400, 'Failed to get user');
+  }
+
+  return result;
+};
+
+const updateSingleUser = async (id: string, data: any) => {
+  const result = await prisma.user.update({
+    where: {
+      id: id,
+    },
+    data,
+  });
+
+  if (!result) {
+    throw new ApiError(400, 'Failed to update user');
   }
 
   return result;
@@ -28,4 +43,5 @@ const getSingleUser = async (id: string) => {
 export const UserService = {
   getAllUsers,
   getSingleUser,
+  updateSingleUser,
 };
