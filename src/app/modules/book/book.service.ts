@@ -20,11 +20,20 @@ const createBook = async (data: Book): Promise<Book> => {
 const getAllBooks = async () => {
   const result = await prisma.book.findMany({});
 
+  const total = await prisma.book.count();
+
   if (!result) {
     throw new ApiError(400, 'Failed to get books');
   }
 
-  return result;
+  return {
+    meta: {
+      total,
+      page: 1,
+      limit: 10,
+    },
+    data: result,
+  };
 };
 
 const getSingleBook = async (id: string) => {
