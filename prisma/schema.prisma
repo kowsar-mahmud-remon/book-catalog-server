@@ -57,7 +57,7 @@ model Order {
   id String @id @default(uuid())
   
   userId String
-  category User @relation(fields: [userId],references: [id])
+  user User @relation(fields: [userId],references: [id])
 
   orderedBooks Json[]
   status String
